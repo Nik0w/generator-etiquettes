@@ -12,7 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { GeneratorComponent } from './generator/generator.component';
-
+import { UserResolver } from './core/user-resolver';
 import { AuthGuard } from './core/auth.guard';
 import { AuthServiceService } from './core/auth-service.service';
 import { UserService } from './core/user.service';
@@ -32,7 +32,7 @@ import { UserService } from './core/user.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [AuthServiceService, UserService, AuthGuard],
+  providers: [AuthServiceService, UserService, AuthGuard, UserResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

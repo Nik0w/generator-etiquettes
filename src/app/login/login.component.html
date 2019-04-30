@@ -1,17 +1,23 @@
 <div class="container-login">
 
-	<form [formGroup]="loginForm">
-	   <div class="form-group">
-         <label>Email address</label>
-         <input type="email" formControlName="email" class="form-control">
-       </div>
-	   <div class="form-group">
-	     <label>Password</label>
-	     <input type="password" class="form-control" formControlName="password" required>
-	     <label class="error">{{errorMessage}}</label>
-	     <label class="success">{{successMessage}}</label>
-	   </div>
-	   <button type="submit" (click)="tryLogin(loginForm.value)" class="btn btn-default">Login</button>
-	</form>	
+	<div class="login">
+		
+		<h1>Generator</h1>
+
+		<form [formGroup]="loginForm">
+		   <div class="form-group">
+	         <input placeholder="Login" type="email" formControlName="email" class="form-control">
+	       </div>
+		   <div class="form-group">
+		     <input placeholder="Password" type="password" class="form-control" formControlName="password" required>
+		     <div>
+		    	<label class="error">{{errorMessage}}</label>
+		    	<label class="success">{{successMessage}}</label>
+	   		 </div>		
+		   </div>
+		   <button type="submit" (click)="tryLogin(loginForm.value)" class="btn btn-default">Login</button>
+		</form>
+	
+	</div>
 
 </div>

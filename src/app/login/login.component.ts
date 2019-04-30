@@ -6,7 +6,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.sass']
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
 
@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
   tryLogin(value){
      this.authService.doLogin(value)
      .then(res => {
-       this.router.navigate(['generator']);
+       this.router.navigate(['/generator']);
      }, err => {
        console.log(err);
        this.errorMessage = err.message;
