@@ -1,0 +1,80 @@
+$bg: #efefef;
+$dark: #232323; 
+$light: #fefefe;
+$active: #e23b13;
+$blue: #293847;
+
+.container-generator{
+
+	width: 100vw;
+	height: 100vh;
+	background: #D3CCE3;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	color: $dark;
+
+	.left-bar{
+		width: 350px;
+		height: 100vh;
+		background: $light;
+		text-align: center;
+		display: inline-block;
+		vertical-align: top;
+
+		input{
+			display: block;
+		}
+	}
+
+	.generator{
+		width: calc(100vw - 350px);
+		height: 100vh;
+		display: inline-block;
+
+		.container-etiquette{
+			width: 300px;
+			height: 500px;
+			margin: 0 auto;
+			background: url('/assets/images/bg.png') top center;
+			background-size: cover;
+
+			.brand{
+				position: absolute;
+				max-width: 120px;
+				margin-top: 100px;
+				margin-left: 12px;
+				font-size: 14px;
+				overflow: hidden;
+			}
+
+			.sku{
+				position: absolute;
+				max-width: 145px;
+				margin-top: 100px;
+				margin-left: 140px;
+				font-size: 14px;
+				overflow: hidden;
+			}
+
+			.conso{
+				position: absolute;
+			    margin-top: 360px;
+			    margin-left: 170px;
+			    font-size: 50px;
+			    width: 100px;
+			    text-align: center;
+			    font-weight: 700;
+			    overflow: hidden;
+			}
+		}
+	
+		.saveBtn{
+			position: absolute;
+			width: calc(100vw - 390px);
+			margin-left: 20px;
+			bottom:20px;
+			padding: 16px;
+		}
+	}
+
+}

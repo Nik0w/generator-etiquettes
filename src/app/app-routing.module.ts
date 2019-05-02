@@ -8,11 +8,17 @@ import { UserResolver } from './core/user-resolver';
 
 import { AuthGuard } from './core/auth.guard';
 
-const routes: Routes = [
+/*const routes: Routes = [
 	{ path: '',   redirectTo: '/login', pathMatch: 'full' },
 	{ path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
 	{ path: 'generator', component: GeneratorComponent, resolve: {data: UserResolver} }
+];*/
+
+const routes: Routes = [
+	{ path: '',   redirectTo: '/generator', pathMatch: 'full' },
+	{ path: 'generator', component: GeneratorComponent}
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

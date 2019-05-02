@@ -15,8 +15,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
   	public authService: AuthServiceService,
-	private router: Router,
-	private fb: FormBuilder)
+	  private router: Router,
+	  private fb: FormBuilder)
   {
   	this.createForm();
   }
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
        console.log(err);
        this.errorMessage = err.message;
      })
-}
+  }
 
   ngOnInit() {
   }

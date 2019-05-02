@@ -1,4 +1,40 @@
-<p>
-  generator works!
-  <button (click)="logout()">Logout</button>
-</p>
+
+<div class="container-generator">
+	
+	<div class="left-bar">
+		<button (click)="logout()">Logout</button>
+		
+		<h2>Generator</h2>
+
+		<input [(ngModel)]="marque" type="text" placeholder='Marque'>
+		<input [(ngModel)]="sku" type="text" placeholder='Sku'>
+		<input [(ngModel)]="conso" type="text" placeholder='Consommation'>
+		<select id="">
+		    <option value="">--Classe énérgetique--</option>
+		    <option value="dog">A+++</option>
+		    <option value="cat">A++</option>
+		    <option value="hamster">A+</option>
+		    <option value="parrot">A</option>
+		    <option value="spider">B</option>
+		    <option value="goldfish">C</option>
+		    <option value="goldfish">D</option>
+		</select>
+
+	</div>
+
+	<div class="generator">
+
+		<div class="container-etiquette">
+
+			<div class="brand">{{marque}}</div>
+			<div class="sku">{{sku}}</div>
+			<div class="classE">A++</div>
+			<div class="conso">{{conso}}</div>
+			
+		</div>
+		
+
+		<button class="saveBtn">Enregistrer l'image</button>
+	</div>
+
+</div>

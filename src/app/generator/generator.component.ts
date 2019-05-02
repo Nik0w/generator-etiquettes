@@ -5,24 +5,28 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-generator',
   templateUrl: './generator.component.html',
-  styleUrls: ['./generator.component.sass']
+  styleUrls: ['./generator.component.scss']
 })
 export class GeneratorComponent implements OnInit {
 
-  constructor(
-  	public authService: AuthServiceService,
-  	private location : Location) { }
+	public marque:string = '';
+	public sku:string = '';
+	public conso:string = '';
 
-  ngOnInit() {
-  }
+	constructor(
+		public authService: AuthServiceService,
+		private location : Location) { }
 
-  logout(){
-      this.authService.doLogout()
-      .then((res) => {
-        this.location.back();
-      }, (error) => {
-        console.log("Logout error", error);
-      });
-    }
+	ngOnInit() {
+	}
+
+	logout(){
+	  this.authService.doLogout()
+	  .then((res) => {
+	    this.location.back();
+	  }, (error) => {
+	    console.log("Logout error", error);
+	  });
+	}
 
 }
