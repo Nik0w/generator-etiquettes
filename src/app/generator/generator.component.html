@@ -24,17 +24,19 @@
 
 	<div class="generator">
 
-		<div class="container-etiquette">
+		<div id="etiquette">
 
-			<div class="brand">{{marque}}</div>
-			<div class="sku">{{sku}}</div>
-			<div class="classE">A++</div>
-			<div class="conso">{{conso}}</div>
-			
+			<div class="container-etiquette">
+				<div class="brand">SA{{marque}}</div>
+				<div class="sku">{{sku}}</div>
+				<div class="classE">A++</div>
+				<div class="conso">{{conso}}</div>		
+			</div>
+
 		</div>
 		
 
-		<button class="saveBtn">Enregistrer l'image</button>
+		<button (click)="exportAndSave()" class="saveBtn">Enregistrer l'image</button>
 	</div>
 
 </div>

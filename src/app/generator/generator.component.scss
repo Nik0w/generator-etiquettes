@@ -39,29 +39,30 @@ $blue: #293847;
 			background-size: cover;
 
 			.brand{
-				position: absolute;
+				display: inline-block;
 				max-width: 120px;
-				margin-top: 100px;
-				margin-left: 12px;
+				padding-top: 100px;
+				padding-left: 12px;
 				font-size: 14px;
 				overflow: hidden;
 			}
 
 			.sku{
-				position: absolute;
-				max-width: 145px;
-				margin-top: 100px;
-				margin-left: 140px;
+				display: inline-block;
+				max-width: 148px;
+				padding-top: 100px;
+				margin-left: 20px;
 				font-size: 14px;
 				overflow: hidden;
 			}
 
 			.conso{
-				position: absolute;
-			    margin-top: 360px;
-			    margin-left: 170px;
+				display: inline-block;
+			    padding-top: 237px;
+			    padding-left: 6px;
+			    margin-left: 150px;
 			    font-size: 50px;
-			    width: 100px;
+			    width: 134px;
 			    text-align: center;
 			    font-weight: 700;
 			    overflow: hidden;
