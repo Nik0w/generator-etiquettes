@@ -8,9 +8,7 @@ $blue: #293847;
 
 	width: 100vw;
 	height: 100vh;
-	background: #D3CCE3;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #eaeaea;  /* fallback for old browsers */
 	color: $dark;
 
 	.left-bar{
@@ -21,8 +19,46 @@ $blue: #293847;
 		display: inline-block;
 		vertical-align: top;
 
-		input{
-			display: block;
+		h2{
+			font-size: 32px;
+			margin: 30px 0;
+		}
+
+		input, select{
+			display: inline-block;
+		    width: 300px;
+		    padding: 14px 10px;
+		    border: 0;
+		    border-bottom: 2px solid $blue;
+		    outline: none;
+		    margin-bottom: 25px;
+		    transition: all .3s ease;
+
+		    &:focus{
+		    	border-bottom: 2px solid $active;
+		    }
+		}
+
+		button{
+			border:none;
+			padding: 10px 15px;
+			cursor: pointer;
+
+			&:hover i{
+				color: $active;
+			}
+		
+			i{
+				color: $blue;
+			}
+		}
+
+		button.resetBtn{
+			margin-top: 50px;
+		    width: 300px;
+		    background: #293847;
+		    color: white;
+		    padding: 15px 10px;
 		}
 	}
 
@@ -31,51 +67,128 @@ $blue: #293847;
 		height: 100vh;
 		display: inline-block;
 
-		.container-etiquette{
+		.place-etiquette{
 			width: 300px;
-			height: 500px;
-			margin: 0 auto;
-			background: url('/assets/images/bg.png') top center;
-			background-size: cover;
+			margin: auto;
+		}
 
-			.brand{
-				display: inline-block;
-				max-width: 120px;
-				padding-top: 100px;
-				padding-left: 12px;
-				font-size: 14px;
-				overflow: hidden;
-			}
+		#etiquette{
+			width: 300px;
 
-			.sku{
-				display: inline-block;
-				max-width: 148px;
-				padding-top: 100px;
-				margin-left: 20px;
-				font-size: 14px;
-				overflow: hidden;
-			}
+			.container-etiquette{
+				width: 300px;
+				height: 500px;
+				margin: 0 auto;
+				background: url('/assets/images/bg.png') top center;
+				background-size: cover;
 
-			.conso{
-				display: inline-block;
-			    padding-top: 237px;
-			    padding-left: 6px;
-			    margin-left: 150px;
-			    font-size: 50px;
-			    width: 134px;
-			    text-align: center;
-			    font-weight: 700;
-			    overflow: hidden;
+				.brand{
+					position:relative;
+					display: inline-block;
+					width: 120px;
+					left: 10px;
+					top: 100px;
+					font-size: 14px;
+					overflow: hidden;
+					min-height: 50px;
+				}
+
+				.sku{
+					position: relative;
+					display: inline-block;
+					width: 145px;
+					top: 100px;
+					left: 25px;
+					font-size: 14px;
+					overflow: hidden;
+					min-height: 50px;
+				}
+
+				.conso{
+					position:relative;
+					display: inline-block;
+				    top: 282px;
+					left: 152px;
+				    font-size: 50px;
+				    width: 134px;
+				    text-align: center;
+				    font-weight: 700;
+				    overflow: hidden;
+				    min-height: 61px;
+				}
+
+				.classE {
+					position:relative;
+				    background: black;
+				    height: 40px;
+				    left: 235px;
+				    width: 55px;
+				    color: white;
+			        font-weight: 700;
+			        text-align: center;
+			        padding-top: 10px;
+		  		}
+			  	.classE:before {
+				    border-right: 25px solid black;
+				    border-top: 20px solid transparent;
+				    border-bottom: 20px solid transparent;
+				    content: "";
+				    height: 0;
+				    left: -25px;
+				    position: absolute;
+				    top: 0;
+				    width: 0;
+			  	}
+			  	.Appp{
+			  		top: 84px;
+			  	}
+			  	.App{
+			  		top: 108px;
+			  	}
+			  	.Ap{
+			  		top: 132px;
+			  	}
+			  	.A{
+			  		top: 158px;
+			  	}
+			  	.B{
+			  		top: 182px;
+			  	}
+			  	.C{
+			  		top: 208px;
+			  	}
+			  	.D{
+			  		top: 232px;
+			  	}
 			}
 		}
 	
 		.saveBtn{
 			position: absolute;
+			cursor: pointer;
 			width: calc(100vw - 390px);
 			margin-left: 20px;
 			bottom:20px;
 			padding: 16px;
+			background: #e23b13;
+			border: none;
+			color: white;
+			font-weight: 700;
+			transition: all .3s ease;
+
+			&:hover{
+				background: $blue;
+			}
 		}
+
+		@keyframes spin{
+			to{transform:rotate(360deg);}
+		}
+
+		.spin{
+			animation: spin 1s ease-in-out infinite;
+		}
+
 	}
 
 }

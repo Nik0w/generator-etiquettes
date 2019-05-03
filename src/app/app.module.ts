@@ -17,12 +17,14 @@ import { UserResolver } from './core/user-resolver';
 import { AuthGuard } from './core/auth.guard';
 import { AuthServiceService } from './core/auth-service.service';
 import { UserService } from './core/user.service';
+import { SafeHtmlPipe } from './core/safe-html.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    GeneratorComponent
+    GeneratorComponent,
+    SafeHtmlPipe
   ],
   imports: [
     ReactiveFormsModule,

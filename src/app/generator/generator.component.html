@@ -2,41 +2,44 @@
 <div class="container-generator">
 	
 	<div class="left-bar">
-		<button (click)="logout()">Logout</button>
+		<button (click)="logout()"><i class="fas fa-arrow-left"></i></button>
 		
 		<h2>Generator</h2>
 
 		<input [(ngModel)]="marque" type="text" placeholder='Marque'>
 		<input [(ngModel)]="sku" type="text" placeholder='Sku'>
 		<input [(ngModel)]="conso" type="text" placeholder='Consommation'>
-		<select id="">
+		<select [(ngModel)]="class" (change)="changeClassE($event)" id="">
 		    <option value="">--Classe énérgetique--</option>
-		    <option value="dog">A+++</option>
-		    <option value="cat">A++</option>
-		    <option value="hamster">A+</option>
-		    <option value="parrot">A</option>
-		    <option value="spider">B</option>
-		    <option value="goldfish">C</option>
-		    <option value="goldfish">D</option>
+		    <option value="Appp">A+++</option>
+		    <option value="App">A++</option>
+		    <option value="Ap">A+</option>
+		    <option value="A">A</option>
+		    <option value="B">B</option>
+		    <option value="C">C</option>
+		    <option value="D">D</option>
 		</select>
+
+		<button (click)="reset()" class="resetBtn">Reset</button>
 
 	</div>
 
 	<div class="generator">
 
-		<div id="etiquette">
+		<div class="place-etiquette">
 
-			<div class="container-etiquette">
-				<div class="brand">SA{{marque}}</div>
-				<div class="sku">{{sku}}</div>
-				<div class="classE">A++</div>
-				<div class="conso">{{conso}}</div>		
+			<div id="etiquette">
+				<div class="container-etiquette">
+					<div class="brand">{{marque}}</div>
+					<div class="sku">{{sku}}</div>
+					<div [ngClass]="'classE ' + class">{{classETxt}}</div>
+					<div class="conso">{{conso}}</div>		
+				</div>
 			</div>
-
+			
 		</div>
-		
 
-		<button (click)="exportAndSave()" class="saveBtn">Enregistrer l'image</button>
+		<button (click)="exportAndSave()" class="saveBtn" [innerHTML]="buttonText | safeHtml"></button>
 	</div>
 
 </div>
